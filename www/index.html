@@ -1,42 +1,108 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <title></title>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <center>
+                <img src="img/ban2.png" style="text-align:center; width:70%" />
+            </center>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+        <div data-role="content" style="text-align:center">
+            <b>Valor $1.000</b>
+            <div data-role="collapsible-set">
+                <div data-role="collapsible" data-collapsed="false">
+                    <h3>
+                        Identificate
+                    </h3>
+                    <div data-role="fieldcontain" data-controltype="textinput">
+                        <label for="textinput4">
+                            Cedula:
+                        </label>
+                        <input id="textinput4" type="text" placeholder="" value="" data-mini="true">
+                    </div>
+                    <div data-role="fieldcontain" data-controltype="textinput">
+                        <label for="textinput3">
+                            Nick:
+                        </label>
+                        <input id="textinput3" type="text" placeholder="" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="img/BRA.png" style="width:45%" />
+                </div>
+                <div class="ui-block-b">
+                    <img src="img/COL.png" style="width:45%" />
+                </div>
+            </div>
+
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <div data-role="fieldcontain" data-controltype="textinput">
+                        <label for="textinput1">
+                            Brazil
+                        </label>
+                        <input id="textinput1" type="number" placeholder="0" value="" style="text-align:center">
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div data-role="fieldcontain" data-controltype="textinput">
+                        <label for="textinput2" style="align-content:center">
+                            Colombia
+                        </label>
+                        <input id="textinput2" type="number" placeholder="0" value="" style="text-align:center">
+                    </div>
+
+                </div>
+                <div id="ganador" data-role="fieldcontain" data-controltype="radiobuttons">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>
+                            Ganador Penales:
+                        </legend>
+                        <input id="radio1" name="ganador_penales" type="radio" value="radio1" width="50%">
+                        <label for="radio1">
+                            Brazil
+                        </label>
+                        <input id="radio2" type="radio" name="ganador_penales" value="radio2" width="50%">
+                        <label for="radio2">
+                            Colombia
+                        </label>
+                    </fieldset>
+                </div>
+                <input id="guardarBTN" type="button" value="GUARDAR">
+            </div>
+            <b>
+                Informacion Importante
+            </b>
+            <p style="text-wrap:normal">
+                Recuerde que este concurso es organizado por campuseros y para campuseros, Campus Party no tiene ninguna responsabilidad sobre el.
+            </p>
+            <p style="text-wrap:normal">
+                Para confirmar su participación debe llevar el dinero antes de las 12:00 pm frente al Escenario de Innovacion, Primera Fila, junto a la pared, Arena Meléndez Preguntar por Diego Quintero
+            </p>
+            <p style="text-wrap:normal">
+                El premio sera repartido en cantidades iguales entre los ganadores, restando el 10% del total en apoyo a los desarrolladores de la app :)
+            </p>
+            <p style="text-wrap:normal">
+                En caso de que ningun participante resulte Ganador, el equipo Desarrollador Dispondra del dinero.
+            </p>
+            <p style="text-wrap:normal">
+                La lista de ganadores e Instrucciones para reclamar el premio sera publicada <a href="http://danielgranados.net/CPCO7polla.pdf">aqui</a>.
+            </p>
+            <p style="text-wrap:normal">
+                En Caso de ser Ganador, Debe presentarse con su documento de identidad.
+            </p>
+</div>
+
+    </div>
+</body>
 </html>
